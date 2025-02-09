@@ -1,0 +1,32 @@
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator flavoured_ids {
+  provider = "prisma-generator-flavoured-ids"
+  output   = "../../../node_modules/.prisma/client/index.d.ts"
+}
+
+generator fabbrica {
+  provider = "prisma-fabbrica"
+  output   = "../src/@generated/fabbrica"
+}
+
+generator zod {
+  provider    = "nestjs-zod-prisma"
+  output      = "../src/@generated/zod"
+  modelSuffix = "ZodModel"
+  generateDto = false
+}
+
+model Example {
+  id String @id @default(cuid())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

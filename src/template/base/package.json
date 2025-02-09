@@ -1,0 +1,30 @@
+{
+  "name": "monorepo",
+  "scripts": {
+    "build": "turbo run build",
+    "start:dev": "turbo run start:dev",
+    "lint": "turbo run lint",
+    "biome:lint": "bun biome lint apps && bun biome lint packages",
+    "bump": "bunx npm-check-updates -u --deep -p bun && bun i && bun update"
+  },
+  "dependencies": {
+    "lodash": "4.17.21",
+    "uuid": "11.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "1.2.1",
+    "@types/lodash": "4.17.15",
+    "@types/node": "22.12.0",
+    "@types/uuid": "10.0.0",
+    "eslint": "9.19.0",
+    "ts-node": "10.9.2",
+    "turbo": "2.3.4",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.22.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

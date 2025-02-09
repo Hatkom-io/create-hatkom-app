@@ -1,0 +1,7 @@
+type Example {
+  id: ID!
+}
+
+type Query {
+  exampleQuery: [Example!]!
+}

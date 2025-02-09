@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "next.js"
+  ],
+  "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "4.3.0",
+    "@next/eslint-plugin-next": "15.1.6",
+    "eslint-config-next": "15.1.6",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-promise": "7.2.1",
+    "eslint-plugin-react": "7.37.4"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "start:dev": {
+      "dependsOn": ["prisma:generate", "^build"]
+    },
+    "build": {
+      "dependsOn": ["prisma:generate", "^build"],
+      "outputs": ["dist"]
+    },
+    "prisma:generate": {
+      "inputs": ["prisma/schema.prisma"],
+      "cache": false
+    },
+    "validation:generate": {
+      "dependsOn": ["prisma:generate", "^build"],
+      "inputs": ["prisma/schema.prisma"]
+    },
+    "graphql:generate:schema": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**"]
+    },
+    "lint": {
+      "dependsOn": ["build"],
+      "inputs": [
+        "src/**",
+        "bin/**",
+        "package.json",
+        "tsconfig.json",
+        ".eslintrc.js"
+      ]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": [
+        "src/**",
+        "bin/**",
+        "package.json",
+        "tsconfig.json",
+        ".eslintrc.js"
+      ]
+    }
+  }
+}

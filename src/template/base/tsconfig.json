@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2021",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "types": ["bun-types"]
+  }
+}

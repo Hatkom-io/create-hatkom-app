@@ -1,0 +1,20 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "start:dev": {
+      "dependsOn": ["api#graphql:generate:schema"]
+    },
+    "ci:build:production": {
+      "dependsOn": ["api#graphql:generate:schema"]
+    },
+    "ci:build:staging": {
+      "dependsOn": ["api#graphql:generate:schema"]
+    },
+    "graphql:generate:schema": {
+      "dependsOn": ["api#graphql:generate:schema"]
+    },
+    "lint": {
+      "dependsOn": ["graphql:generate:schema"]
+    }
+  }
+}

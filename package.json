@@ -1,0 +1,20 @@
+{
+  "name": "hatkom-stack",
+  "version": "0.0.0",
+  "author": "Max Kuznetsov",
+  "scripts": {
+    "lint": "turbo run lint"
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "packageManager": "bun@1.1.43",
+  "dependencies": {},
+  "devDependencies": {
+    "turbo": "2.3.3",
+    "eslint": "9.19.0",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.21.0",
+    "@biomejs/biome": "1.9.4"
+  }
+}
