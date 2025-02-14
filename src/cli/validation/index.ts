@@ -4,16 +4,6 @@ export const distTagsBodySchema = z.object({
   latest: z.string(),
 })
 
-export const chaPackageJsonSchema = z.object({
-  name: z.string(),
-  packageManager: z.string().nullish(),
-  chaMetadata: z
-    .object({
-      initVersion: z.string(),
-    })
-    .optional(),
-})
-
 export const removeTrailingSlash = (input: string) => {
   let result = input
 

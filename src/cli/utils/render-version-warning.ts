@@ -46,7 +46,7 @@ const checkForLatestVersion = (): Promise<string> => {
               body += data.toString()
             })
             res.on('end', () => {
-              resolve(distTagsBodySchema.parse(body).latest)
+              resolve(distTagsBodySchema.parse(JSON.parse(body)).latest)
             })
           } else {
             reject(new Error('Unable to check for latest version.'))
