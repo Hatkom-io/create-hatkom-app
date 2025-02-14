@@ -75,7 +75,7 @@ export const scaffoldProject = async ({
 
       if (overwriteDir === 'clear') {
         spinner.info(
-          `Emptying ${chalk.cyan.bold(projectName)} and creating t3 app..\n`,
+          `Emptying ${chalk.cyan.bold(projectName)} and creating hatkom app..\n`,
         )
         fs.emptyDirSync(projectDir)
       }

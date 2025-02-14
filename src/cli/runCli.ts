@@ -57,7 +57,7 @@ export const runCli = async (): Promise<CliResults> => {
     )
     .option(
       '-y, --default',
-      'Bypass the CLI and use all default options to bootstrap a new t3-app',
+      'Bypass the CLI and use all default options to bootstrap a new hatkom-app',
       false,
     )
 
