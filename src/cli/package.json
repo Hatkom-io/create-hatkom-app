@@ -1,5 +1,5 @@
 {
-  "name": "@hatkom/create-hatkom-app",
+  "name": "create-hatkom-app",
   "version": "0.0.0",
   "author": "Max Kuznetsov",
   "type": "module",
@@ -7,6 +7,19 @@
   "bin": {
     "create-hatkom-app": "./dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hatkom-io/create-hatkom-app.git",
+    "directory": "src/cli"
+  },
+  "files": [
+    "dist",
+    "template",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "package.json"
+  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc",

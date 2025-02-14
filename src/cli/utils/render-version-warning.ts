@@ -38,7 +38,7 @@ const checkForLatestVersion = (): Promise<string> => {
   return new Promise((resolve, reject) => {
     https
       .get(
-        'https://registry.npmjs.org/-/package/@hatkom/create-hatkom-app/dist-tags',
+        'https://registry.npmjs.org/-/package/create-hatkom-app/dist-tags',
         (res) => {
           if (res.statusCode === 200) {
             let body = ''
