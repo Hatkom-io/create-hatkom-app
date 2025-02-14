@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "Max Kuznetsov",
   "scripts": {
-    "build:cli": "turbo --filter=create-hatkom-app build",
+    "build:cli": "turbo --filter=@hatkom/create-hatkom-app build",
     "lint": "turbo lint",
     "biome:lint": "bun biome lint src",
     "check": "turbo lint typecheck && manypkg check",

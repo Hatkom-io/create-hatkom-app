@@ -1,5 +1,5 @@
 {
-  "name": "create-hatkom-app",
+  "name": "@hatkom/create-hatkom-app",
   "version": "0.0.0",
   "author": "Max Kuznetsov",
   "type": "module",
