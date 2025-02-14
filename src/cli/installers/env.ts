@@ -10,7 +10,7 @@ type GetEnvContent = {
 
 export const envVariablesInstaller: Installer = ({
   projectDir,
-  noApi = false,
+  noApi = true,
 }) => {
   const withApi = !noApi
 

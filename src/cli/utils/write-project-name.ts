@@ -15,7 +15,7 @@ type WritePackageNameProps = {
 export const writeProjectName = async ({
   projectDir,
   scopedAppName,
-  noApi = false,
+  noApi = true,
 }: WritePackageNameProps) => {
   const pkgManager = getUserPkgManager()
 
