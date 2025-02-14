@@ -3,6 +3,8 @@
   "globalDependencies": ["**/.env.*local"],
   "ui": "stream",
   "tasks": {
-    "lint": {}
+    "lint": {},
+    "typecheck": {},
+    "build": {}
   }
 }
