@@ -5,8 +5,10 @@
   "scripts": {
     "build:cli": "turbo --filter=create-hatkom-app build",
     "lint": "turbo lint",
+    "biome:lint": "bun biome lint src",
     "check": "turbo lint typecheck && manypkg check",
-    "release": "changeset version"
+    "release": "changeset version",
+    "prepare": "husky"
   },
   "workspaces": [
     "src/*"
@@ -18,6 +20,7 @@
     "@changesets/cli": "2.27.3",
     "@manypkg/cli": "0.20.0",
     "eslint": "9.19.0",
+    "husky": "9.1.7",
     "turbo": "2.3.3",
     "typescript": "5.7.3",
     "typescript-eslint": "8.21.0"
