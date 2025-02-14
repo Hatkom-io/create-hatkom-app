@@ -1,12 +1,9 @@
-import { PackageManager } from 'utils/get-user-package-manager.js'
+import { PackageManager } from '../utils/get-user-package-manager.js'
+import { apolloInstaller } from './apollo.js'
 import { envVariablesInstaller } from './env.js'
 import { nestJsInstaller } from './nestjs.js'
 
-export const availablePackages = [
-  'nestjs',
-  // 'tailwind',
-  'envVariables',
-] as const
+export const availablePackages = ['nestjs', 'apollo', 'envVariables'] as const
 
 export type AvailablePackages = (typeof availablePackages)[number]
 
@@ -16,7 +13,6 @@ export type InstallerOptions = {
   noInstall: boolean
   noApi?: boolean
   packages?: PkgInstallerMap
-  appRouter?: boolean
   projectName: string
   scopedAppName?: string
 }
@@ -37,16 +33,12 @@ export const buildPkgInstallerMap = (
     inUse: packages.includes('nestjs'),
     installer: nestJsInstaller,
   },
-  // tailwind: {
-  //   inUse: packages.includes('tailwind'),
-  //   installer: tailwindInstaller,
-  // },
   envVariables: {
     inUse: true,
     installer: envVariablesInstaller,
   },
-  // eslint: {
-  //   inUse: true,
-  //   installer: dynamicEslintInstaller,
-  // },
+  apollo: {
+    inUse: packages.includes('nestjs'),
+    installer: apolloInstaller,
+  },
 })

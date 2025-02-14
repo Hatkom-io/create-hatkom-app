@@ -10,12 +10,6 @@
     "jsx": "preserve",
     "plugins": [
       {
-        "name": "gql.tada/ts-plugin",
-        "schema": "../api/schema.gql",
-        "tadaOutputLocation": "./graphql-env.ts",
-        "shouldCheckForColocatedFragments": false
-      },
-      {
         "name": "next"
       }
     ]

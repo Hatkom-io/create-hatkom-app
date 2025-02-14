@@ -9,7 +9,6 @@
     "src/*"
   ],
   "packageManager": "bun@1.1.43",
-  "dependencies": {},
   "devDependencies": {
     "turbo": "2.3.3",
     "eslint": "9.19.0",

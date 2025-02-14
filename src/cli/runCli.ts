@@ -11,13 +11,6 @@ type CliFlags = {
   noInstall: boolean
   noApi: boolean
   default: boolean
-
-  /** @internal Used in CI. */
-  CI: boolean
-  /** @internal Used in CI. */
-  appRouter: boolean
-  /** @internal Used in CI. */
-  tailwind: boolean
 }
 
 type CliResults = {
@@ -30,13 +23,10 @@ const defaultOptions: CliResults = {
   appName: defaultAppName,
   packages: ['nestjs'],
   flags: {
-    CI: false,
-    tailwind: true,
     noApi: false,
     noGit: false,
     noInstall: false,
     default: false,
-    appRouter: true,
   },
 }
 
@@ -70,19 +60,7 @@ export const runCli = async (): Promise<CliResults> => {
       'Bypass the CLI and use all default options to bootstrap a new t3-app',
       false,
     )
-    /** START CI-FLAGS */
-    .option('--CI', "Boolean value if we're running in CI", false)
-    .option(
-      '--tailwind [boolean]',
-      'Experimental: Boolean value if we should install Tailwind CSS. Must be used in conjunction with `--CI`.',
-      (value) => !!value && value !== 'false',
-    )
-    .option(
-      '--appRouter [boolean]',
-      'Explicitly tell the CLI to use the new Next.js app router',
-      (value) => !!value && value !== 'false',
-    )
-    /** END CI-FLAGS */
+
     .version(getVersion(), '-v, --version', 'Display the version number')
     .parse(process.argv)
 
@@ -95,26 +73,10 @@ export const runCli = async (): Promise<CliResults> => {
 
   cliResults.flags = program.opts()
 
-  if (cliResults.flags.CI) {
-    cliResults.packages = []
-
-    if (cliResults.flags.tailwind) {
-      cliResults.packages.push('tailwind')
-    }
-
-    if (!cliResults.flags.noApi) {
-      cliResults.packages.push('nestjs')
-    }
-
-    return cliResults
-  }
-
   if (cliResults.flags.default) {
     return cliResults
   }
 
-  // Explained below why this is in a try/catch block
-  // if --CI flag is set, we are running in CI mode and should not prompt the user
   const pkgManager = getUserPkgManager()
 
   const project = await p.group(
@@ -127,17 +89,6 @@ export const runCli = async (): Promise<CliResults> => {
             validate: validateAppName,
           }),
       }),
-      styling: () => {
-        return p.confirm({
-          message: 'Will you be using Tailwind CSS for styling?',
-        })
-      },
-      appRouter: () => {
-        return p.confirm({
-          message: 'Would you like to use Next.js App Router?',
-          initialValue: true,
-        })
-      },
       api: () => {
         return p.confirm({
           message: 'Should we initialize NestJS app?',
@@ -175,16 +126,11 @@ export const runCli = async (): Promise<CliResults> => {
     packages.push('nestjs')
   }
 
-  if (project.styling) {
-    packages.push('tailwind')
-  }
-
   return {
     appName: project.name ?? cliResults.appName,
     packages,
     flags: {
       ...cliResults.flags,
-      appRouter: project.appRouter || cliResults.flags.appRouter,
       noGit: !project.git || cliResults.flags.noGit,
       noInstall: !project.install || cliResults.flags.noInstall,
     },

@@ -12,7 +12,7 @@ export const logNextSteps = async ({
   projectDir,
 }: Pick<
   InstallerOptions,
-  'projectName' | 'packages' | 'noInstall' | 'projectDir' | 'appRouter'
+  'projectName' | 'packages' | 'noInstall' | 'projectDir'
 >) => {
   const pkgManager = getUserPkgManager()
 
@@ -25,23 +25,23 @@ export const logNextSteps = async ({
   if (noInstall) {
     // To reflect yarn's default behavior of installing packages when no additional args provided
     if (pkgManager === 'yarn') {
-      logger.info(`  ${pkgManager}`)
+      logger.info(`\n#  ${pkgManager}`)
     } else {
-      logger.info(`  ${pkgManager} install`)
+      logger.info(`\n#  ${pkgManager} install`)
     }
   }
 
   if (packages?.nestjs.inUse) {
-    logger.info('  Make sure your Docker is started')
+    logger.info('\n#  Make sure your Docker is started')
     logger.info('  Then run: ')
     logger.info(`  ${pkgManager} turbo db:start:docker`)
   }
 
-  logger.info(`  ${pkgManager} turbo start:dev`)
+  logger.info(`\n  ${pkgManager} turbo start:dev`)
 
   if (!(await isInsideGitRepo(projectDir)) && !isRootGitRepo(projectDir)) {
-    logger.info('  git init')
+    logger.info('\n  git init')
   }
 
-  logger.info(`  git commit -m "initial commit"`)
+  logger.info(`\n  git commit -m "initial commit"`)
 }

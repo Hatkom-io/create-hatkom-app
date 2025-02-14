@@ -10,14 +10,12 @@ type CreateProjectOptions = {
   packages: PkgInstallerMap
   scopedAppName?: string
   noInstall: boolean
-  appRouter: boolean
 }
 
 export const createProject = async ({
   projectName,
   packages,
   noInstall,
-  appRouter,
 }: CreateProjectOptions) => {
   const pkgManager = getUserPkgManager()
   const projectDir = path.resolve(process.cwd(), projectName)
@@ -28,7 +26,6 @@ export const createProject = async ({
     projectDir,
     pkgManager,
     noInstall,
-    appRouter,
   })
 
   // Install the selected packages
@@ -38,38 +35,7 @@ export const createProject = async ({
     pkgManager,
     packages,
     noInstall,
-    appRouter,
   })
-
-  // // Select necessary _app,index / layout,page files
-  // if (appRouter) {
-  //   // Replace next.config
-  //   fs.copyFileSync(
-  //     path.join(PKG_ROOT, 'template/extras/config/next-config-appdir.js'),
-  //     path.join(projectDir, 'next.config.js'),
-  //   )
-
-  //   selectLayoutFile({ projectDir, packages })
-  //   selectPageFile({ projectDir, packages })
-  // } else {
-  //   selectAppFile({ projectDir, packages })
-  //   selectIndexFile({ projectDir, packages })
-  // }
-
-  // // If no tailwind, select use css modules
-  // if (!packages.tailwind.inUse) {
-  //   const indexModuleCss = path.join(
-  //     PKG_ROOT,
-  //     'template/extras/src/index.module.css',
-  //   )
-  //   const indexModuleCssDest = path.join(
-  //     projectDir,
-  //     'src',
-  //     appRouter ? 'app' : 'pages',
-  //     'index.module.css',
-  //   )
-  //   fs.copyFileSync(indexModuleCss, indexModuleCssDest)
-  // }
 
   return projectDir
 }
