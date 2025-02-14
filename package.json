@@ -13,16 +13,16 @@
   "workspaces": [
     "src/*"
   ],
-  "packageManager": "bun@1.1.43",
+  "packageManager": "bun@1.2.2",
   "dependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@changesets/changelog-github": "0.4.8",
-    "@changesets/cli": "2.27.3",
-    "@manypkg/cli": "0.20.0",
-    "eslint": "9.19.0",
-    "husky": "9.1.7",
-    "turbo": "2.3.3",
-    "typescript": "5.7.3",
-    "typescript-eslint": "8.21.0"
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.27.3",
+    "@manypkg/cli": "^0.20.0",
+    "eslint": "^9.19.0",
+    "husky": "^9.1.7",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
   }
 }

@@ -13,20 +13,20 @@
     "lint": "bun tsc && eslint \"**/*.ts\" && biome format ./**/*"
   },
   "dependencies": {
-    "@clack/prompts": "0.10.0",
-    "chalk": "5.4.1",
-    "commander": "13.1.0",
-    "execa": "7.2.0",
-    "fs-extra": "11.2.0",
-    "gradient-string": "3.0.0",
-    "ora": "8.2.0",
-    "sort-package-json": "2.14.0"
+    "@clack/prompts": "^0.10.0",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "execa": "^7.2.0",
+    "fs-extra": "^11.2.0",
+    "gradient-string": "^3.0.0",
+    "ora": "^8.2.0",
+    "sort-package-json": "^2.14.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "11.0.4",
-    "@types/node": "22.13.1",
-    "tsup": "8.3.6",
-    "type-fest": "4.33.0",
-    "zod": "3.24.1"
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.1",
+    "tsup": "^8.3.6",
+    "type-fest": "^4.33.0",
+    "zod": "^3.24.1"
   }
 }
