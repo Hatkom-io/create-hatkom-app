@@ -68,10 +68,6 @@ pnpm start:dev  # For PNPM users
 
 The generated monorepo provides a solid foundation, but it’s fully customizable. You can install additional dependencies or modify the structure as needed.
 
-## License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
 ---
 
 🚀 **Get started now and accelerate your development with create-hatkom-app!**
