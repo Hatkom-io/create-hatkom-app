@@ -1,5 +1,11 @@
 # create-hatkom-app
 
+## 1.0.1
+
+### Patch Changes
+
+- [`caee82ee247ec8a81d9e342504b0d727feae76fe`](https://github.com/Hatkom-io/create-hatkom-app/commit/caee82ee247ec8a81d9e342504b0d727feae76fe) Thanks [@MaxSchmide](https://github.com/MaxSchmide)! - fix package root path
+
 ## 1.0.0
 
 ### Major Changes
