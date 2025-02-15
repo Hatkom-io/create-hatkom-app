@@ -1,7 +1,7 @@
 # create-hatkom-app
 
 [![NPM Version](https://img.shields.io/npm/v/create-hatkom-app.svg)](https://www.npmjs.com/package/create-hatkom-app)
-[![License](https://img.shields.io/npm/l/create-hatkom-app.svg)](LICENSE)
+[![License](https://img.shields.io/npm/l/create-hatkom-app.svg)](https://github.com/Hatkom-io/create-hatkom-app/blob/main/LICENSE)
 
 
 A CLI tool to quickly initialize a monorepo with the Hatkom stack, making development faster and more efficient. It sets up a monorepo with essential infrastructure and utilities, using popular technologies like **NestJS** for API development and **Next.js** for web applications.
