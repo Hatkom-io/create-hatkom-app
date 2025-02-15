@@ -49,4 +49,7 @@ export default typescriptEslint.config(
       ],
     },
   },
+  {
+    ignores: ['cli/template/*'],
+  },
 )

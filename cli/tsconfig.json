@@ -4,5 +4,5 @@
     "baseUrl": "./",
     "checkJs": true
   },
-  "include": ["index.ts"]
+  "include": ["index.ts", "tsup.config.ts"]
 }

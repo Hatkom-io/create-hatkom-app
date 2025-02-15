@@ -20,7 +20,7 @@
     }
   },
   "files": {
-    "ignore": ["node_modules/*", "dist/*", "cli/template"]
+    "ignore": ["node_modules/*", "dist/*", "template/*"]
   },
   "formatter": {
     "formatWithErrors": true,
