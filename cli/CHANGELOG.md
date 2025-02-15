@@ -1,5 +1,11 @@
 # create-hatkom-app
 
+## 1.0.2
+
+### Patch Changes
+
+- [`77e7ebee7115fbf3cca723f88836301db0f44f03`](https://github.com/Hatkom-io/create-hatkom-app/commit/77e7ebee7115fbf3cca723f88836301db0f44f03) Thanks [@MaxSchmide](https://github.com/MaxSchmide)! - include template in published files
+
 ## 1.0.1
 
 ### Patch Changes
