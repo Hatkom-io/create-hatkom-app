@@ -1,5 +1,11 @@
 # create-hatkom-app
 
+## 1.0.4
+
+### Patch Changes
+
+- [`b1593aafec2ea781b509602caa9605ab456dfc16`](https://github.com/Hatkom-io/create-hatkom-app/commit/b1593aafec2ea781b509602caa9605ab456dfc16) Thanks [@MaxSchmide](https://github.com/MaxSchmide)! - remove license section from readme
+
 ## 1.0.3
 
 ### Patch Changes
