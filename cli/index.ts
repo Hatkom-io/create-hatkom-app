@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import gradient from 'gradient-string'
 import { createProject } from './helpers/create-project.js'
 import { initializeGit } from './helpers/init-git.js'

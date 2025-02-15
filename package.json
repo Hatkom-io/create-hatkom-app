@@ -5,13 +5,13 @@
   "scripts": {
     "build:cli": "turbo --filter=create-hatkom-app build",
     "lint": "turbo lint",
-    "biome:lint": "bun biome lint src",
+    "biome:lint": "bun biome lint cli",
     "check": "turbo lint typecheck && manypkg check",
     "release": "changeset version",
     "prepare": "husky"
   },
   "workspaces": [
-    "src/*"
+    "*"
   ],
   "packageManager": "bun@1.2.2",
   "dependencies": {
