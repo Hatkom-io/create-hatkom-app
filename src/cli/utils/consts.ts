@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 const __filename = fileURLToPath(import.meta.url)
 const distPath = path.dirname(__filename)
 
-export const pkgRoot = path.join(distPath, '../../')
+export const pkgRoot = path.join(distPath, '../')
 
 export const apiDir = 'apps/api'
 

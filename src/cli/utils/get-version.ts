@@ -8,7 +8,7 @@ const isPackageJson = (json: unknown): json is PackageJson =>
   typeof json === 'object' && json !== null && 'version' in json
 
 export const getVersion = () => {
-  const packageJsonPath = path.join(pkgRoot, 'cli/package.json')
+  const packageJsonPath = path.join(pkgRoot, 'package.json')
 
   const packageJsonContent: unknown = fs.readJSONSync(packageJsonPath)
 
