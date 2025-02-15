@@ -1,6 +1,6 @@
 {
   "name": "create-hatkom-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Max Kuznetsov",
   "type": "module",
   "exports": "./dist/index.js",
