@@ -1,5 +1,11 @@
 # create-hatkom-app
 
+## 1.0.3
+
+### Patch Changes
+
+- [`d79763dac41b950f94c4a4d40a3c3bf2db81cc94`](https://github.com/Hatkom-io/create-hatkom-app/commit/d79763dac41b950f94c4a4d40a3c3bf2db81cc94) Thanks [@MaxSchmide](https://github.com/MaxSchmide)! - fix readme
+
 ## 1.0.2
 
 ### Patch Changes
